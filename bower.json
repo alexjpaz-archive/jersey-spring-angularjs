@@ -1,0 +1,24 @@
+{
+  "name": "nga",
+  "version": "0.0.0",
+  "authors": [
+    "Alex Paz <alexander.j.paz@ngc.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-resource": "~1.2.4",
+    "angular-route": "~1.2.4",
+    "jquery": "~2.0.3",
+    "ydn-db": "~0.8.12"
+  },
+  "main": "src/main/webapp/index.html"
+
+}
