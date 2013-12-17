@@ -53,7 +53,6 @@ angular.module('helpers')
 					success: function(data) {
 						var assetRepository = new AssetRepository();
 						assetRepository.importFromJSON(data);
-						console.log(assetRepository.assets);
 						assetRepository.add(screenName, 'assets/screen/'+screenName+'.js');
 						_this.load(assetRepository.assets, callback);
 						_this.load('assets/screen/'+screenName+'.css'); // Asyncronous

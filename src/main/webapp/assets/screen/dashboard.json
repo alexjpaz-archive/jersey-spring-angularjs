@@ -1,5 +1,7 @@
 {
 	"components": {
-		"derp": true
+		"hello": {
+			"hello": true
+		}
 	}
 }
