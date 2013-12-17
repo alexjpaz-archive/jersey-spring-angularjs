@@ -1,0 +1,17 @@
+{
+    "lib": {
+        "angular": true,
+        "angular-route": true
+    },
+    "config": {
+        "app": true,
+        "helpers": true,
+        "routes": true
+    },
+    "helpers": {
+        "factory": true
+    },
+	"components": {
+		"app": true
+	}
+}
