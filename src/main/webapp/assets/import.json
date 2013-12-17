@@ -12,6 +12,9 @@
         "factory": true
     },
 	"components": {
-		"app": true
+		"app": true,
+		"layout": {
+			"navbar": true,
+		}
 	}
 }

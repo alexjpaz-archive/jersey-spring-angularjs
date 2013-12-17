@@ -175,16 +175,21 @@ angular.module('helpers')
 	$provide.provider('ComponentFactory', function() {
 		function ComponentFactory() {
 			this.build = function(component_name, controllerDef) {
-				console.debug('Building component',component_name);
-				console.trace('Building component',component_name);
+				console.debug("Building component '%s'",component_name);
+
+				var componentTemplateUrl = component_name;
+
+				if(angular.isObject(controllerDef) && controllerDef.templateUrlBase) {
+					componentTemplateUrl = [controllerDef.templateUrlBase,component_name].join('/');
+				}
 
 				var componentFactoryObjFn = function() {
 					var defaultComponentFactoryObj = {
 						restrict: 'EA',
-						templateUrl: 'assets/components/'+component_name+'.html',
+						templateUrl: 'assets/components/'+componentTemplateUrl+'.html',
 						scope: true,
 						compile: function() {
-							head.load('assets/components/'+component_name+'.css');
+							head.load('assets/components/'+componentTemplateUrl+'.css');
 						},
 					};
 
